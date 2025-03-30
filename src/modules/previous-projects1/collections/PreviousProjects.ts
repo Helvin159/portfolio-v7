@@ -1,7 +1,7 @@
 // Payload
 import type { CollectionConfig } from 'payload'
 
-export const Projects: CollectionConfig = {
+export const PreviousProjects: CollectionConfig = {
   slug: 'previousProjects',
   admin: {},
   access: {},
