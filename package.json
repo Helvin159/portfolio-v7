@@ -15,12 +15,13 @@
     "start": "cross-env NODE_OPTIONS=--no-deprecation next start"
   },
   "dependencies": {
-    "@payloadcms/db-mongodb": "latest",
+    "@payloadcms/db-postgres": "^3.31.0",
     "@payloadcms/next": "latest",
     "@payloadcms/payload-cloud": "latest",
     "@payloadcms/richtext-lexical": "latest",
     "cross-env": "^7.0.3",
     "graphql": "^16.8.1",
+    "jsonwebtoken": "^9.0.2",
     "next": "15.2.3",
     "payload": "latest",
     "react": "19.0.0",
@@ -28,6 +29,8 @@
     "sharp": "0.32.6"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
     "@eslint/eslintrc": "^3.2.0",
     "@types/node": "^22.5.4",
     "@types/react": "19.0.12",
@@ -39,7 +42,7 @@
   },
   "engines": {
     "node": "^18.20.2 || >=20.9.0",
-    "pnpm": "^9"
+    "pnpm": "^10"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
