@@ -2,7 +2,7 @@
 import type { CollectionConfig } from 'payload'
 
 export const Projects: CollectionConfig = {
-  slug: 'previousProjects',
+  slug: 'projects',
   admin: {},
   access: {},
   fields: [
