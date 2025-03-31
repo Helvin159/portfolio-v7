@@ -11,7 +11,14 @@ export const Users: CollectionConfig = {
   slug: 'users',
   admin: {
     useAsTitle: 'email',
+    defaultColumns: ['email'],
   },
-  auth: true,
+
+  auth: {
+    loginWithUsername: {
+      allowEmailLogin: true,
+      requireEmail: true,
+    },
+  },
   fields: [nameFieldGroup(), addressFieldGroup(), emailsFieldGroup(), phonesFieldGroup()],
 }

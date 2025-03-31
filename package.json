@@ -12,13 +12,15 @@
     "generate:types": "cross-env NODE_OPTIONS=--no-deprecation payload generate:types",
     "lint": "cross-env NODE_OPTIONS=--no-deprecation next lint",
     "payload": "cross-env NODE_OPTIONS=--no-deprecation payload",
-    "start": "cross-env NODE_OPTIONS=--no-deprecation next start"
+    "start": "cross-env NODE_OPTIONS=--no-deprecation next start",
+    "tailwind": "npx @tailwindcss/cli -i ./src/assets/css/tailwind/input.css -o ./src/assets/css/tailwind/output.css --watch"
   },
   "dependencies": {
     "@payloadcms/db-postgres": "3.30.0",
     "@payloadcms/next": "latest",
     "@payloadcms/payload-cloud": "latest",
     "@payloadcms/richtext-lexical": "latest",
+    "@tailwindcss/cli": "^4.0.17",
     "cross-env": "^7.0.3",
     "graphql": "^16.8.1",
     "jsonwebtoken": "^9.0.2",
@@ -26,7 +28,8 @@
     "payload": "latest",
     "react": "19.0.0",
     "react-dom": "19.0.0",
-    "sharp": "0.32.6"
+    "sharp": "0.32.6",
+    "tailwindcss": "^4.0.17"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",

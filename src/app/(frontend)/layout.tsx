@@ -2,6 +2,7 @@ import React from 'react'
 
 // CSS
 import '@/assets/css/styles.css'
+import '@/assets/css/tailwind/output.css'
 
 export const metadata = {
   description: 'A blank template using Payload in a Next.js app.',

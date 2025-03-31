@@ -10,9 +10,12 @@ import sharp from 'sharp'
 // Collections
 import { Users } from '@/modules/users/collections/Users'
 import { Projects } from '@/modules/projects/collections/Projects'
-import { PreviousProjects } from '@/modules/previous-projects1/collections/PreviousProjects'
+import { PreviousProjects } from '@/modules/previous-projects/collections/PreviousProjects'
 import { Reviews } from '@/modules/reviews/collections/Reviews'
 import { Media } from '@/modules/media/collections/Media'
+import { Languages } from './modules/languages/collections/Languages'
+import { Skills } from './modules/skills/collections/Skills'
+import { Frameworks } from './modules/frameworks/collections/Frameworks'
 
 // Globals
 import { Pages } from '@/components/globals/pages'
@@ -27,7 +30,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Projects, PreviousProjects, Reviews, Media],
+  collections: [Users, Projects, PreviousProjects, Languages, Skills, Frameworks, Reviews, Media],
   globals: [Pages],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
