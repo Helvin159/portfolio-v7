@@ -16,6 +16,11 @@ export const Projects: CollectionConfig = {
       label: 'Link',
       type: 'text',
     },
+    {
+      name: 'featured',
+      label: 'Featured',
+      type: 'checkbox',
+    },
   ],
   hooks: {},
 }

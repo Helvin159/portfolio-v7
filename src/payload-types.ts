@@ -228,6 +228,7 @@ export interface Project {
   id: string;
   title?: string | null;
   url?: string | null;
+  featured?: boolean | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -485,6 +486,7 @@ export interface UsersSelect<T extends boolean = true> {
 export interface ProjectsSelect<T extends boolean = true> {
   title?: T;
   url?: T;
+  featured?: T;
   updatedAt?: T;
   createdAt?: T;
 }

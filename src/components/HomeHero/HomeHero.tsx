@@ -20,8 +20,8 @@ const HomeHero = async ({
     <div className="hero__container bg-dark-gray text-white mx-auto w-full max-w-7xl pt-4 px-20 pb-0">
       <div className="hero__container__location p-0.5">
         <p className="text-xl leading-4 mt-4 pt-5 relative">
-          <span>
-            <Image className="mt-0 mr-1.5 -mb-1 ml-0" src={minimap} alt="mini-map" />
+          <span className="inline-block">
+            <Image className="mt-0 mr-1.5 -mb-1 ml-0 inline-block" src={minimap} alt="mini-map" />
           </span>
           Methuen, MA USA
         </p>
