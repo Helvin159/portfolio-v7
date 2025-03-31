@@ -5,6 +5,7 @@ import '@/assets/css/styles.css'
 import '@/assets/css/tailwind/output.css'
 import { MobileMenuProvider } from '../../context/mobile-menu-context'
 import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 
 export const metadata = {
   description: 'A blank template using Payload in a Next.js app.',
@@ -20,6 +21,13 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
         <MobileMenuProvider>
           <Header lastName="Rymer" />
           <main>{children}</main>
+          <Footer
+            name="Helvin Rymer"
+            email="helvin159@gmail.com"
+            linkedIn=""
+            instagram=""
+            github=""
+          />
         </MobileMenuProvider>
       </body>
     </html>
