@@ -17,6 +17,8 @@
   --color-translucent-black: rgba(0, 0, 0, 0.95);
   --color-light-gray: #2e2e2e;
   --color-input-bg: #1d1d1d;
+  --color-input-text: #bebebe;
+  --color-input-border: #2e2e2e;
   --color-btn-bg-color: #ffffff;
 
   /* Font and Text */
