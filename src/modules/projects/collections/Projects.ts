@@ -3,7 +3,9 @@ import type { CollectionConfig } from 'payload'
 
 export const Projects: CollectionConfig = {
   slug: 'projects',
-  admin: {},
+  admin: {
+    defaultColumns: ['title', 'createdAt'],
+  },
   access: {},
   fields: [
     {

@@ -5,6 +5,7 @@
   --font-mono: 'Roboto Mono', monospace;
   --primary-bg-color: #161616;
   --secondary-bg-color: #2e2e2e;
+  --tertiary-bg-color: #404040;
   --input-bg-color: #1d1d1d;
   --btn-bg-color: #ffffff;
 
@@ -21,9 +22,16 @@
   --color-input-border: #2e2e2e;
   --color-btn-bg-color: #ffffff;
 
+  --color-primary: #161616;
+  --color-secondary: #2e2e2e;
+  --color-tertiary: #404040;
+
   /* Font and Text */
   --font-primary: 'Roboto Mono', monospace;
 
   /* Shadow */
   --shadow-btn-highlight: 2px 2px 0 #000c;
+
+  /* Spacing */
+  --spacing-87.5: 21.875rem;
 }

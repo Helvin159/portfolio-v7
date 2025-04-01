@@ -98,9 +98,11 @@ export interface Config {
   };
   globals: {
     pages: Page;
+    'meta-details': MetaDetail;
   };
   globalsSelect: {
     pages: PagesSelect<false> | PagesSelect<true>;
+    'meta-details': MetaDetailsSelect<false> | MetaDetailsSelect<true>;
   };
   locale: null;
   user: User & {
@@ -260,6 +262,7 @@ export interface Language {
 export interface Skill {
   id: string;
   title?: string | null;
+  expirienceYears?: number | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -515,6 +518,7 @@ export interface LanguagesSelect<T extends boolean = true> {
  */
 export interface SkillsSelect<T extends boolean = true> {
   title?: T;
+  expirienceYears?: T;
   updatedAt?: T;
   createdAt?: T;
 }
@@ -620,6 +624,20 @@ export interface Page {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "meta-details".
+ */
+export interface MetaDetail {
+  id: string;
+  title?: string | null;
+  description?: string | null;
+  metaOgDetails?: {
+    image?: string | null;
+  };
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "pages_select".
  */
 export interface PagesSelect<T extends boolean = true> {
@@ -628,6 +646,22 @@ export interface PagesSelect<T extends boolean = true> {
     | {
         title?: T;
         id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "meta-details_select".
+ */
+export interface MetaDetailsSelect<T extends boolean = true> {
+  title?: T;
+  description?: T;
+  metaOgDetails?:
+    | T
+    | {
+        image?: T;
       };
   updatedAt?: T;
   createdAt?: T;

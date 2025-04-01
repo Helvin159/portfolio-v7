@@ -14,6 +14,7 @@ import githubImg from '@/assets/images/svg/icon-github-square.svg'
 import { useAuth } from '../context/auth-provider'
 import Link from 'next/link'
 import Image from 'next/image'
+import CommentTitle from './CommentTitle'
 
 type FooterProps = {
   name: string
@@ -27,8 +28,6 @@ const Footer = ({ name, email, linkedIn, instagram, github }: FooterProps) => {
   const loadingText = 'loading...'
   const { user } = useAuth()
 
-  console.log(user)
-
   const fName = useRef(null)
   const fEmail = useRef(null)
   const fMsg = useRef(null)
@@ -41,9 +40,7 @@ const Footer = ({ name, email, linkedIn, instagram, github }: FooterProps) => {
         <div className="flex flex-col-reverse flex-wrap justify-center items-center m-0 px-20 py-0 md:p-0 lg:flex-row lg:items-baseline lg:justify-evenly">
           <div className="footer__content__contact__container__sizing">
             <div className="">
-              <p className="text-white text-2xl italic font-light leading-10 text-left">
-                // Drop Me A Line
-              </p>
+              <CommentTitle title="Drop Me A Line" />
             </div>
             <form ref={form}>
               <input
@@ -146,11 +143,11 @@ const Footer = ({ name, email, linkedIn, instagram, github }: FooterProps) => {
             </div>
           </div>
         </div>
-        {/* <div className="footer__content__copyright__container">
-          <p>Copyright</p>
-          {!user.user && <button onClick={signInWithPopup}>Admin?</button>}
-          {user.user && <button onClick={signoutUser}>Signout</button>}
-        </div> */}
+        <div className="footer__content__copyright__container border-t-tertiary border-t-2">
+          <p className="text-md font-light leading-2 text-center">Copyright</p>
+          {!user && <Link href={'/admin'}>Admin?</Link>}
+          {user && <button>Signout</button>}
+        </div>
       </div>
     </div>
   )

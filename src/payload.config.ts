@@ -19,6 +19,7 @@ import { Frameworks } from './modules/frameworks/collections/Frameworks'
 
 // Globals
 import { Pages } from '@/components/globals/pages'
+import { MetaDetails } from '@/components/globals/meta-details'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -31,7 +32,7 @@ export default buildConfig({
     },
   },
   collections: [Users, Projects, PreviousProjects, Languages, Skills, Frameworks, Reviews, Media],
-  globals: [Pages],
+  globals: [Pages, MetaDetails],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
