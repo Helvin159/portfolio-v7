@@ -284,6 +284,9 @@
   .bottom-0 {
     bottom: calc(var(--spacing) * 0);
   }
+  .bottom-1 {
+    bottom: calc(var(--spacing) * 1);
+  }
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
@@ -412,6 +415,9 @@
   }
   .table {
     display: table;
+  }
+  .table\! {
+    display: table !important;
   }
   .h-9 {
     height: calc(var(--spacing) * 9);
@@ -560,6 +566,11 @@
   }
   .self-end {
     align-self: flex-end;
+  }
+  .truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .rounded {
     border-radius: 0.25rem;
@@ -892,6 +903,9 @@
   .select-all {
     -webkit-user-select: all;
     user-select: all;
+  }
+  .\[client\:\"\+m\.version\+\"\] {
+    client: "+m.version+";
   }
   .sm\:block {
     @media (width >= 40rem) {

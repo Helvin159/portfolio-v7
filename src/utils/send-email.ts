@@ -7,12 +7,12 @@ import emailjs from 'emailjs-com'
  *  Sends email using emailJs
  */
 export default function sendEmail() {
-  let templateParams = {
+  const templateParams = {
     from_name: '',
     from_email: '',
     from_message: '',
   }
-
+  console.log(templateParams)
   // If email and name checks, send email
 
   emailjs
@@ -24,7 +24,7 @@ export default function sendEmail() {
     )
     .then(
       (res) => {
-        // console.log('SUCCESS!', res.status, res.text);
+        console.log('SUCCESS!', res.status, res.text)
         alert('Message sent')
       },
       (err) => {

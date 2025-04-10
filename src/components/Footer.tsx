@@ -1,5 +1,5 @@
 'use client'
-import React, { useContext, useRef } from 'react'
+import React, { useRef } from 'react'
 // import emailjs from 'emailjs-com'
 
 // Utils
@@ -90,7 +90,7 @@ const Footer = ({ name, email, linkedIn, instagram, github }: FooterProps) => {
           <div className="footer__content__contact__container__contact footer__content__contact__container__sizing">
             <div className="footer__content__contact__container__contact__header">
               <p className="text-white text-2xl italic font-light leading-10 text-left">
-                // Lets Colaborate
+                {'// Lets Collaborate'}
               </p>
             </div>
             <div className="contact-details">

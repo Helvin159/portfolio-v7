@@ -22,6 +22,8 @@ const Header = ({ lastName }: { lastName: string }) => {
   const { user, avatarUrl } = useAuth()
   const { isOpen, setIsOpen } = useMobileMenu()
 
+  console.log(user)
+
   const handleOnClick = () => {
     router.push('/contact')
   }
